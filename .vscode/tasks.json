@@ -1,0 +1,67 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+
+    // for the documentation about the tasks.json format
+
+    "version": "2.0.0",
+
+    "tasks": [
+
+        {
+            "type": "shell",
+
+            // 调试用的标签
+            "label": "Build",
+            // g++ 的路径：没有路径就用环境变量
+            "command": "F:\\workPlace\\sfmlSoftware\\mingw64\\bin\\g++",
+
+            // 配置 g++ 后面的东西
+            "args": [
+                "-g",
+                
+                "${workspaceFolder}\\src\\*.cpp",
+                "${workspaceFolder}\\build\\*.o",
+                
+                "-mwindows",
+                "-o",
+
+                "${workspaceFolder}\\build\\bin\\main.exe",
+
+                "-std=c++11",
+                
+                "-I${workspaceFolder}\\include",
+
+                "-IF:\\workPlace\\sfmlSoftware\\mingw64\\include",
+
+                "-IF:\\workPlace\\sfmlSoftware\\SFML-2.5.1\\include",
+
+                "-LF:\\workPlace\\sfmlSoftware\\SFML-2.5.1\\lib",
+
+                "-lsfml-graphics",
+
+                "-lsfml-window",
+
+                "-lsfml-system"
+            ],
+
+            // 执行文件保存目录
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+
+            "problemMatcher": [
+                "$gcc"
+            ],
+
+            "group": {
+                "kind": "build",
+
+                "isDefault": true
+
+            }
+
+        }
+
+    ]
+
+}

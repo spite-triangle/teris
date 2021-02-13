@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+
+    // Hover to view descriptions of existing attributes.
+
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    "version": "0.2.0",
+
+    "configurations": [
+
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            
+            "request": "launch",
+
+            // 调试前 是否在编译一次，调用对于的task标签。注释掉这个配置，就是不编译了
+            // "preLaunchTask": "Build",
+            
+            // 调试那个程序
+            "program": "${workspaceFolder}\\build\\bin\\main.exe",
+
+            "args": [],
+
+            "stopAtEntry": false,
+            
+            // 调试程序时的工作目录
+            "cwd": "${workspaceFolder}",
+
+            "environment": [],
+
+            "externalConsole": false,
+
+            // 调试工具
+            "MIMode": "gdb",
+
+            // gdp调试工具的路径：没有绝对路径就是环境变量
+            "miDebuggerPath": "F:\\workPlace\\sfmlSoftware\\mingw64\\bin\\gdb.exe",
+
+            "setupCommands": [
+
+                {
+                    "description": "Enable pretty-printing for gdb",
+
+                    "text": "-enable-pretty-printing",
+
+                    "ignoreFailures": true
+
+                }
+
+            ]
+
+        }
+
+    ]
+
+}
+
