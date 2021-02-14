@@ -17,8 +17,7 @@
 
             // 配置 g++ 后面的东西
             "args": [
-                "-g",
-                
+                // "-g",
                 "${workspaceFolder}\\src\\*.cpp",
                 "${workspaceFolder}\\build\\*.o",
                 
@@ -30,13 +29,13 @@
                 "-std=c++11",
                 
                 "-I${workspaceFolder}\\include",
-
+                
                 "-IF:\\workPlace\\sfmlSoftware\\mingw64\\include",
-
+                
                 "-IF:\\workPlace\\sfmlSoftware\\SFML-2.5.1\\include",
-
+                
                 "-LF:\\workPlace\\sfmlSoftware\\SFML-2.5.1\\lib",
-
+                "-LF:\\workPlace\\sfmlSoftware\\mingw64\bin",
                 "-lsfml-graphics",
 
                 "-lsfml-window",
@@ -44,9 +43,9 @@
                 "-lsfml-system"
             ],
 
-            // 执行文件保存目录
+            // mingw的bin目录位置
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "F:\\workPlace\\sfmlSoftware\\mingw64\\bin"
             },
 
             "problemMatcher": [
